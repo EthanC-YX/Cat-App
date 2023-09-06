@@ -12,7 +12,16 @@ struct CatFactsView: View {
     @StateObject var catFactsManager = CatFactsManager()
     
     var body: some View {
-        Text("Cat Facts")
+        VStack {
+            // if the optional is not nil, display it
+            if let catFact = catFactsManager.catFact {
+                Text(catFact.fact)
+                    .padding()
+            } else { // if it's nil, display a loading indicator
+                ProgressView()
+                    .progressViewStyle(.circular)
+            }
+        }
             .onAppear {
                 catFactsManager.getCatFact()
             }
