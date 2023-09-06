@@ -21,11 +21,15 @@ struct ContentView: View {
                     }
                 CatBounceView()
                     .tabItem {
-                        Label("Bouncy Cat", systemImage: "arrowshape.bounce.right.fill")
+                        Label("Bouncy Cat", systemImage: "arrowshape.bounce.right")
                     }
                 CatGalleryView()
                     .tabItem {
                         Label("Cat Gallery", systemImage: "photo.stack.fill")
+                    }
+                CatIDView()
+                    .tabItem {
+                        Label("Cat ID", systemImage: "viewfinder")
                     }
             }
         }

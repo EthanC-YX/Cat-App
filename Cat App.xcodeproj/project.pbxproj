@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA216DB62AA81BEE0048E37F /* CatIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA216DB52AA81BEE0048E37F /* CatIDView.swift */; };
+		AA216DB82AA81DAB0048E37F /* CatFactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA216DB72AA81DAB0048E37F /* CatFactsManager.swift */; };
 		AA30F7722AA81816006339E9 /* Cat_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30F7712AA81816006339E9 /* Cat_AppApp.swift */; };
 		AA30F7742AA81816006339E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30F7732AA81816006339E9 /* ContentView.swift */; };
 		AA30F7762AA81818006339E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA30F7752AA81818006339E9 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA216DB52AA81BEE0048E37F /* CatIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatIDView.swift; sourceTree = "<group>"; };
+		AA216DB72AA81DAB0048E37F /* CatFactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsManager.swift; sourceTree = "<group>"; };
 		AA30F76E2AA81816006339E9 /* Cat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA30F7712AA81816006339E9 /* Cat_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat_AppApp.swift; sourceTree = "<group>"; };
 		AA30F7732AA81816006339E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,9 +83,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA216DB92AA81DC00048E37F /* Cat Facts */ = {
+			isa = PBXGroup;
+			children = (
+				AA216DB72AA81DAB0048E37F /* CatFactsManager.swift */,
+				AA30F79B2AA8182F006339E9 /* CatFactsView.swift */,
+			);
+			path = "Cat Facts";
+			sourceTree = "<group>";
+		};
 		AA30F7652AA81816006339E9 = {
 			isa = PBXGroup;
 			children = (
+				AA216DB92AA81DC00048E37F /* Cat Facts */,
 				AA30F7702AA81816006339E9 /* Cat App */,
 				AA30F7812AA81818006339E9 /* Cat AppTests */,
 				AA30F78B2AA81818006339E9 /* Cat AppUITests */,
@@ -104,7 +118,7 @@
 			children = (
 				AA30F7712AA81816006339E9 /* Cat_AppApp.swift */,
 				AA30F7732AA81816006339E9 /* ContentView.swift */,
-				AA30F79B2AA8182F006339E9 /* CatFactsView.swift */,
+				AA216DB52AA81BEE0048E37F /* CatIDView.swift */,
 				AA30F79D2AA81836006339E9 /* CatBounceView.swift */,
 				AA30F79F2AA81842006339E9 /* CatGalleryView.swift */,
 				AA30F7A12AA8184D006339E9 /* CatImagesView.swift */,
@@ -269,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA216DB62AA81BEE0048E37F /* CatIDView.swift in Sources */,
 				AA30F7742AA81816006339E9 /* ContentView.swift in Sources */,
 				AA30F7A22AA8184D006339E9 /* CatImagesView.swift in Sources */,
 				AA30F79E2AA81836006339E9 /* CatBounceView.swift in Sources */,
+				AA216DB82AA81DAB0048E37F /* CatFactsManager.swift in Sources */,
 				AA30F79C2AA81830006339E9 /* CatFactsView.swift in Sources */,
 				AA30F7722AA81816006339E9 /* Cat_AppApp.swift in Sources */,
 				AA30F7A02AA81842006339E9 /* CatGalleryView.swift in Sources */,
