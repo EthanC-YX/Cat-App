@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct CatFactsView: View {
+    
+    @StateObject var catFactsManager = CatFactsManager()
+    
     var body: some View {
         Text("Cat Facts")
+            .onAppear {
+                catFactsManager.getCatFact()
+            }
     }
 }
 

@@ -10,17 +10,24 @@ import Foundation
 class CatFactsManager: ObservableObject {
     
     let apiURL = URL(string: "https://catfact.ninja/fact")!
+    @Published var catFact: CatFact?
     
     func getCatFact() {
+        
+        catFact = nil
         
         Task {
             let (data, response) = try await URLSession.shared.data(from: apiURL)
             print("🐱 GOT CAT FACT!!! 🐱")
             print(data)
-            print(response)
+            print(String(data: data, encoding: .utf8)!)
+            
+            // update the UI - go back to the main thread
+            try await MainActor.run {
+                catFact = try JSONDecoder().decode(CatFact.self, from:data)
+            }
         }
         
     }
     
 }
-
