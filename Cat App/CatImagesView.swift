@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct CatImagesView: View {
+    
+    @State var catURL = "https://cataas.com/cat?q="
+    
     var body: some View {
-        Text("Cat Images")
+        VStack {
+            
+            Spacer()
+            
+            AsyncImage(url: URL(string: catURL)!) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            
+            Button("Give me new cat") {
+                catURL += "1"
+            }
+            .buttonStyle(.borderedProminent)
+        }
     }
 }
 

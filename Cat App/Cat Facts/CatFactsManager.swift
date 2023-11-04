@@ -17,7 +17,7 @@ class CatFactsManager: ObservableObject {
         catFact = nil
         
         Task {
-            let (data, response) = try await URLSession.shared.data(from: apiURL)
+            let (data, _) = try await URLSession.shared.data(from: apiURL)
             print("🐱 GOT CAT FACT!!! 🐱")
             print(data)
             print(String(data: data, encoding: .utf8)!)
