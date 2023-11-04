@@ -1,10 +1,3 @@
-//
-//  CatFactsView.swift
-//  Cat App
-//
-//  Created by Ethan Chow on 6/9/23.
-//
-
 import SwiftUI
 
 struct CatFactsView: View {
@@ -13,18 +6,28 @@ struct CatFactsView: View {
     
     var body: some View {
         VStack {
-            // if the optional is not nil, display it
             if let catFact = catFactsManager.catFact {
                 Text(catFact.fact)
-                    .padding()
-            } else { // if it's nil, display a loading indicator
+                    .padding(50)
+                    .multilineTextAlignment(.center)
+            } else {
                 ProgressView()
                     .progressViewStyle(.circular)
             }
-        }
-            .onAppear {
-                catFactsManager.getCatFact()
+            
+            if catFactsManager.catFact != nil {
+                Button("Give me a new cat fact") {
+                    catFactsManager.getCatFact()
+                }
+                .padding(15)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
             }
+        }
+        .onAppear {
+            catFactsManager.getCatFact()
+        }
     }
 }
 
@@ -33,3 +36,4 @@ struct CatFactsView_Previews: PreviewProvider {
         CatFactsView()
     }
 }
+
